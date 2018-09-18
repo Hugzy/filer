@@ -1,0 +1,13 @@
+version: "3"
+services:
+    filer:
+        image: "filer:dev"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        hostname: filer
+        stdin_open: true
+        tty: true
+        working_dir: '/filer-dev'
+        volumes:
+            - ".:/filer-dev"
